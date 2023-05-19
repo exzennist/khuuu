@@ -1,19 +1,28 @@
-<script >
+<script>
 <!--
+/*
+Random link button- By JavaScript Kit (http://javascriptkit.com)
+Over 300+ free scripts!
+This credit MUST stay intact for use
+*/
 
-// 랜덤으로 생성할 링크들을 설정 하세요
+//specify random links below. You can have as many as you want
 var randomlinks=new Array()
 
-randomlinks[0]="http://www.jasko.co.kr"
-randomlinks[1]="http://www.daum.net"
-randomlinks[2]="http://www.yahoo.co.kr"
-randomlinks[3]="http://www.imbc.com"
-randomlinks[4]="http://www.naver.com"
+randomlinks[0]="http://naver.com"
+randomlinks[1]="http://empas.com"
+randomlinks[2]="http://yahoo.co.kr"
+randomlinks[3]="http://daum.net"
+randomlinks[4]="http://google.co.kr"
 
 function randomlink(){
 window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
 }
 //-->
 </script>
+<form>
+<p><input type="button" name="B1" value="Random Link >>" onclick="randomlink()"></p> </form>
 
-<a href="#" onclick="randomlink()">https://exzennist.github.io/khuuu</a>
+<!--Uncomment below to use a regular text link instead
+<a href="javascript:randomlink()">Random Link</a>
+-->
