@@ -1,30 +1,8 @@
-<meta http-equiv="Refresh" content="5;url=http://daum.net" />
+<?
+$urls[]="http://naver.com";
+$urls[]="http://daum.net";
 
-<script>
-<!--
-/*
-Random link button- By JavaScript Kit (http://javascriptkit.com)
-Over 300+ free scripts!
-This credit MUST stay intact for use
-*/
-
-//specify random links below. You can have as many as you want
-var randomlinks=new Array()
-
-randomlinks[0]="http://naver.com"
-randomlinks[1]="http://empas.com"
-randomlinks[2]="http://yahoo.co.kr"
-randomlinks[3]="http://daum.net"
-randomlinks[4]="http://google.co.kr"
-
-function randomlink(){
-window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
-}
-//-->
-</script>
-<form>
-<p><input type="button" name="B1" value="Random Link >>" onclick="randomlink()"></p> </form>
-
-<!--Uncomment below to use a regular text link instead
-<a href="javascript:randomlink()">Random Link</a>
--->
+$rnd=rand(0,count($urls)-1);
+$redirect=$url[$rnd];
+echo "<html><head><meta http-equiv='refresh' content='0;url=".$redirect."'></head><body></body></html>";
+?>
