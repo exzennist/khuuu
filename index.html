@@ -1,35 +1,21 @@
-<HTML>
-<HEAD>
-<TITLE> Jasko Sample Script </TITLE>
-</HEAD>
-<BODY>
-
-<!------ 아래의 방식으로 BODY 부분에  붙여 넣으세요 ------------->
-
 <script >
+<!--
 
-
+// 랜덤으로 생성할 링크들을 설정 하세요
 var randomlinks=new Array()
 
-// 랜덤으로 보여줄 링크를 설정 하세요
-randomlinks[0]="http://www.yahoo.co.kr"
+randomlinks[0]="http://www.jasko.co.kr"
 randomlinks[1]="http://www.daum.net"
-randomlinks[2]="http://www.lycos.co.kr"
-randomlinks[3]="http://cnn.com"
+randomlinks[2]="http://www.yahoo.co.kr"
+randomlinks[3]="http://www.imbc.com"
 randomlinks[4]="http://www.naver.com"
 
 function randomlink(){
 window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
-// 프레임을 지정하려면 parent.프레임명.location=randomlinks[Math.floor(Math.random()*randomlinks.length)] 처럼 하세요
 }
-
+//-->
 </script>
 
-<form>
+<input type="button" value="랜덤으로 여행하기" onclick="randomlink()">
 
-<p><input type="button" name="B1" value=" 추천링크로 가기 >>" onclick="randomlink()"></p> </form>
-
-<!-------------------- 여기까지 ---------------------->
-
-</BODY>
-</HTML>
+<a href="#" onclick="randomlink()">랜덤으로 여행하기</a>
